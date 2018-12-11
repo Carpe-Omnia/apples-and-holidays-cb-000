@@ -58,8 +58,7 @@ def all_supplies_in_holidays(holiday_hash)
         thing = thing.capitalize!
       end
       stuff = dayray.join(" ")
-      string = supply.join(", ")
-      puts "  #{stuff}: #{string}"
+      puts "  #{stuff}: #{supply}"
     end
   end
 end
@@ -67,14 +66,3 @@ end
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
-  emparray = []
-  holiday_hash.each do |season, holiday|
-    holiday.each do |day, supply|
-      if supply.include?("BBQ")
-        emparray << day
-      end
-    end
-  end
-  puts emparray.join(", ")
-  return emparray
-end
